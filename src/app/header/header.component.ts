@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   title = 'The Will Will Web';
   link = 'http://blog.miniasp.com/';
+  isHighLight = false;
 
   constructor() { }
 
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
     console.log($event);
     $event.stopPropagation();
     this.title = 'Hello';
+    this.isHighLight = !this.isHighLight;
   }
 
   showAlert($event) {

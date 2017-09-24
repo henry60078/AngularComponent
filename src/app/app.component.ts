@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  searchText = '123';
+
+  logContent(element) {
+    console.log(element);
+  }
 }
