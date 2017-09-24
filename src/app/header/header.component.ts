@@ -15,4 +15,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeTitle($event) {
+    console.log($event);
+    $event.stopPropagation();
+    this.title = 'Hello';
+  }
+
+  showAlert($event) {
+    alert('Wait');
+  }
 }
