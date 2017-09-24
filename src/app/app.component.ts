@@ -17,17 +17,11 @@ export class AppComponent {
   constructor(private http: HttpClient) {
     this.http.get<Article[]>('/api/articles.json')
       .subscribe(data => {
-        console.log(data);
         this.articles = data;
       });
   }
 
   showArticleTitle($event) {
-    console.log($event);
     this.clickedTitle = $event;
-  }
-
-  logContent(element) {
-    console.log(element);
   }
 }
