@@ -9,6 +9,6 @@
       <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a [href]="item['category-link']">{{ item.category }}</a></span>
     </div>
   </header>
-  <section class="post-body text" innerHtml="{{ item.summary }}">
+  <section class="post-body text" innerHtml="{{ item.summary }}" (click)="showTitleEvent.emit(item.title)">
   </section>
 </article>

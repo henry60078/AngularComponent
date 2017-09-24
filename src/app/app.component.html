@@ -5,7 +5,8 @@
     <section class="col-md-8 content-wrapper">
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
-        <app-article *ngFor="let item of articles" [data]="item"></app-article>
+        {{ clickedTitle }}
+        <app-article *ngFor="let item of articles" [data]="item" (showTitleEvent)="showArticleTitle($event)"></app-article>
       </div>
     </section>
 

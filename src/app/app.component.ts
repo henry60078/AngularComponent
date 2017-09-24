@@ -9,6 +9,13 @@ export class AppComponent {
   title = 'app';
   searchText = '123';
 
+  clickedTitle: string;
+
+  showArticleTitle($event) {
+    console.log($event);
+    this.clickedTitle = $event;
+  }
+
   articles = [
     {
       "id": 1,
